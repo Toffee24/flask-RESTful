@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@127.0.0.1:3306/some_funny?charset=utf8'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://somefunny:3XZ3FFL3is@localhost:3306/somefunny?charset=utf8'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 api = Api(app)
@@ -139,4 +139,5 @@ api.add_resource(addCollection, '/addCollection')
 api.add_resource(searchCollection, '/searchCollection')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    # app.run(debug=True, host='0.0.0.0')
+    app.run()
